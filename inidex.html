@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Image On Click</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <img id="image1" src="./one.jpg" alt="" onclick="changeImage()">
+        </br>
+        <img id="image2" src="./three.jpg" alt="" onclick="changeImage2()">
+    </div>
+
+    <!-- script to change image -->
+    <script>
+        function changeImage(){
+            let displayImage = document.getElementById('image1')
+            if(displayImage.src.match('./one.jpg')){
+                displayImage.src = './two.jpg'
+            }else{
+                displayImage.src = './one.jpg'
+            }
+        }
+
+        function changeImage2(){
+            let displayImage = document.getElementById('image2')
+            if(displayImage.src.match('./three.jpg')){
+                displayImage.src = './four.jpg'
+            }else{
+                displayImage.src = './three.jpg'
+            }
+        }
+    </script>
+
+</body>
+</html>
